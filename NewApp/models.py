@@ -16,7 +16,11 @@ class Article(models.Model):
 
 class Comment(models.Model):
     article = models.ForeignKey('Article', on_delete=models.CASCADE)
-    body = models.TextField
+    body = models.TextField(null=False, default='')
     date = models.DateTimeField(default=timezone.now)
+
     class Meta:
         ordering = ['date']
+
+    def __str__(self):
+        return self.body
