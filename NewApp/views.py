@@ -31,6 +31,8 @@ def addComment(request):
 
     print(form)
 
+    print('ln1')
+
     if form.is_valid():
         form.save()
 
