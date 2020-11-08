@@ -27,6 +27,8 @@ def addComment(request):
 
     form = CommentForm(request.POST or None)
 
+    print(form)
+
     if form.is_valid():
         form.save()
 
