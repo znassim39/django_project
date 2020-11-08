@@ -31,6 +31,11 @@ def addComment(request):
 
     print(form)
 
+<<<<<<< Updated upstream
+=======
+    print('ln2')
+
+>>>>>>> Stashed changes
     if form.is_valid():
         form.save()
 
