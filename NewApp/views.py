@@ -5,6 +5,8 @@ from .forms import ArticleForm, CommentForm
 
 def index(request):
     articles = Article.objects.all()
+    print(articles)
+    # comment 2
     return render(request, 'NewApp/accueil.html', {'articles': articles})
 
 def showArticle(request, article_id):
